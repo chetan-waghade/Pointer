@@ -42,11 +42,13 @@ a {
     text-decoration: none;
 }
 
+/* icons */
+
 /* buttons as icon */
 .btn-icon {
     background-color: transparent;
     border: none;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color:#e2e8dd;
     cursor: pointer;
     transition: 0.1s ease-in-out color;
@@ -95,9 +97,8 @@ a {
 
 nav{
     width: 100vw;
-    height: 6.5vh;
     background-color: #697268;
-    padding:0.7rem .7rem;
+    padding:1rem 0.7rem;
     
 }
 
@@ -116,12 +117,10 @@ main{
 /* table of content */
 aside{
     width: 15vw;
-    height: 10vh;
     overflow-y: scroll;
-    margin: 1rem 0.5rem;
-    padding: 0.5rem 0;
     font-size: 1rem;
     transition: 0.1s ease-in-out all;
+
 
 }
 
@@ -135,14 +134,13 @@ aside a:hover{
 }
 
 aside .table{
-    
+    padding: 0.5rem;
 }
 
 
 section{
     width: 85vw;
     padding:1rem 0.5rem;
-    margin: 0 1rem;
     overflow-y: scroll;
     color:#697268;
 }
@@ -157,9 +155,8 @@ footer {
     width: 100vw;
     text-align: center;
     padding: .5rem;
-    position: absolute;
-    bottom: 0;
     color: #494847;
+    
 }
 
 
