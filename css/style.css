@@ -14,6 +14,29 @@ body {
 
 /* Utilities */
 
+/* scrollbar */
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: grey transparent;
+  }
+  
+  /* Works on Chrome, Edge, and Safari */
+  *::-webkit-scrollbar {
+    width: 0.2rem;
+  }
+  
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  *::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 20px;
+    border: 3px solid transparent;
+  }
+
 /* anchor */
 a {
     text-decoration: none;
@@ -51,27 +74,34 @@ a {
 }
 
 /* defination box */
-.defination-box{
-    background-color:white;
+/* .defination-box{
+    background-color:#B7D1DA;
     color:#697268;
-    padding: 0.5rem;
-}
+    padding: 1rem;
+    border-radius: .7rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+} */
 
 .highlight{
-    color:purple;
+    color:#4E5340;
+}
+
+/* margin */
+.m-1{
+    margin:1rem 0;
 }
 
 /* Components */
 
 nav{
     width: 100vw;
-    height: 7vh;
+    height: 6.5vh;
     background-color: #697268;
-    padding: .7rem;
+    padding:0.7rem .7rem;
     
 }
 
-nav .navbar{
+nav .navbar{    
     display: flex;
     justify-content: space-between;
 }
@@ -81,14 +111,17 @@ main{
     display: flex;
 }
 
+
 /* aside */
 /* table of content */
 aside{
     width: 15vw;
-    height: auto;
+    height: 10vh;
     overflow-y: scroll;
-    padding: 1rem 0.5rem;
+    margin: 1rem 0.5rem;
+    padding: 0.5rem 0;
     font-size: 1rem;
+    transition: 0.1s ease-in-out all;
 
 }
 
@@ -101,10 +134,22 @@ aside a:hover{
     color:#414741;
 }
 
+aside .table{
+    
+}
+
+
 section{
     width: 85vw;
     padding:1rem 0.5rem;
+    margin: 0 1rem;
+    overflow-y: scroll;
+    color:#697268;
+}
 
+section h1{
+    color:rgb(34, 33, 33);
+    margin-bottom: 0.5rem;
 }
 
 
@@ -116,3 +161,5 @@ footer {
     bottom: 0;
     color: #494847;
 }
+
+
