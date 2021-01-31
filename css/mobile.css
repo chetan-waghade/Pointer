@@ -2,4 +2,8 @@
     aside {
       display: none;
     }
+    /* make section full screen */
+    main section{
+        width: 100vw;
+    }
   }
