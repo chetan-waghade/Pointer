@@ -1,0 +1,118 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'ABeeZee';
+    background-color: whitesmoke;
+}
+
+
+
+/* Utilities */
+
+/* anchor */
+a {
+    text-decoration: none;
+}
+
+/* buttons as icon */
+.btn-icon {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color:#e2e8dd;
+    cursor: pointer;
+    transition: 0.1s ease-in-out color;
+}
+
+.btn-icon:hover {
+    color: #4E5340;
+}
+
+
+/* pop block */
+
+.pop-block{
+    display: none;
+    font-size: 0.7rem;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
+    position: absolute;
+    z-index: 1;
+    right: 3rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: white;
+    color:#333;
+    transition: 0.2s ease-in-out all;
+}
+
+/* defination box */
+.defination-box{
+    background-color:white;
+    color:#697268;
+    padding: 0.5rem;
+}
+
+.highlight{
+    color:purple;
+}
+
+/* Components */
+
+nav{
+    width: 100vw;
+    height: 7vh;
+    background-color: #697268;
+    padding: .7rem;
+    
+}
+
+nav .navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* main */
+main{
+    display: flex;
+}
+
+/* aside */
+/* table of content */
+aside{
+    width: 15vw;
+    height: auto;
+    overflow-y: scroll;
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+
+}
+
+aside a{
+    color:#697268;
+    transition: color 0.1s ease-in-out;
+}
+
+aside a:hover{
+    color:#414741;
+}
+
+section{
+    width: 85vw;
+    padding:1rem 0.5rem;
+
+}
+
+
+footer {
+    width: 100vw;
+    text-align: center;
+    padding: .5rem;
+    position: absolute;
+    bottom: 0;
+    color: #494847;
+}
