@@ -83,10 +83,35 @@ a {
     color:#4E5340;
 }
 
+.note{
+    font-size: 0.9rem;
+    color:green;
+}
+
 /* margin */
 .m-1{
     margin:1rem 0;
 }
+
+ 
+}
+
+/* Code canvas */
+
+.code-canvas{
+    background:white;
+    color:black;
+    padding:1rem;
+    margin: 0.5rem 0;
+}
+
+.output-canvas{
+    background:white;
+    color:black;
+    padding:1rem;
+    margin: 0.5rem 0;
+}
+
 
 /* Components */
 
@@ -117,7 +142,7 @@ nav .navbar{
 main aside{
     width: 15vw;
     padding: 1rem;
-    border:2px solid red;
+    
     text-align: center;
 }
 
@@ -127,7 +152,7 @@ main aside .table-of-content .menu{
 }
 
 main aside .table-of-content .menu li{
-    margin: 1rem 0;
+    margin: 1rem 1rem;
 }
 
 /* color links */
@@ -140,8 +165,10 @@ main aside .table-of-content .menu li a{
 main section{
     width: 85vw;
     padding: 1rem;
-    border:2px solid red;
+    text-align: justify;
 }
+
+
 
 footer{
     text-align: center;
