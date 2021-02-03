@@ -60,6 +60,8 @@
                     </ol>
                 </div>
             </aside>
+
+            <!-- all main content goes here -->
             <section>
                 <h1>Pointers</h1>
                 <p class="m-1">Pointers are variables that stores <b>memory address</b> of another variables/objects.
@@ -72,7 +74,7 @@
                         </code>
                     </p>
                 </div>
-                <p>Here is example code</p>
+                <p>Lets understand it with sample code</p>
                 <div class="code-canvas">
                     <p>
                         <code>
@@ -81,6 +83,7 @@
                                 using namespace std;
                                 <br>
                                 int main(){
+                                <br>int a = 5;
                                 <br> int* ptr = &amp;a; <br>
                                 cout&lt;&lt;ptr; <br>
                                 }</strong>
@@ -90,6 +93,12 @@
                 <div class="output-canvas">
                     <p><code><strong>output : 0x2128</strong></code></p>
                 </div>
+                <!-- code explanation -->
+                <p class="m-1">In code above, we initialized a variable of name <strong>a</strong> with value <strong>5</strong>.
+                just after that we initialized pointer variable by writing <strong>int* ptr</strong> with value <strong>&a</strong>. This is how we initialized pointer variable. 
+                </p>
+
+
                 <p class="note"> Note: The output will differ from compiler to compiler.</p>
 
                 <p class="m-1">But before going into details about pointer, lets talk about these two <b>&amp ,
@@ -105,12 +114,12 @@
                     <div class="code-canvas">
                         <p>
                             <code>
-                                <strong>#include &lt;iostream&gt;
+                                <strong><span class="headerFile">#include &lt;iostream&gt;</span>
                                     <br>
-                                    using namespace std;
+                                    <span class="variableNames">using namespace std;</span>   
                                     <br>
                                     int main(){
-                                    <br> int a= 5; <br>
+                                    <br> <span class="keyword"> int </span>  <span class="variableNames">a</span> = 5; <br>
                                     cout&lt;&lt;&amp;a; <br>
                                     }</strong>
                             </code>
@@ -169,7 +178,7 @@
                         <p><code><strong>output : 0x21239</strong></code></p>
                     </div>
                     <h4 class="m-1">For derefencing pointer variable</h4>
-                    <p>Derefencing means extracting the value located at some address. When declaring pointer variable we use <strong>*</strong> to tell the compiler that it is pointer variable and not a regular one. Therefore pointer stores address of any variable, pointer is initialized to. Now, to get value stored at that address using pointer variable we use <strong>*var_name</strong>. Thus by derefencing pointer variable value at that address is extracted.</p>
+                    <p>Derefencing means extracting the value located at some address. When declaring pointer variable we use <strong>*</strong> to tell the compiler that it is pointer variable and not a regular one. Therefore pointer stores address of any variable, pointer is initialized with. Now, to get value stored at that address using pointer variable we use <strong>*var_name</strong>. Thus by derefencing pointer variable, value at that address is extracted.</p>
                     <p class="m-1">Here is example</p>
                     <div class="code-canvas">
                         <p>

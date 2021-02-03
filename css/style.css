@@ -99,17 +99,27 @@ a {
 /* Code canvas */
 
 .code-canvas{
-    background:white;
+    background:rgb(228, 228, 228);
     color:black;
     padding:1rem;
     margin: 0.5rem 0;
 }
 
 .output-canvas{
-    background:white;
+    background:rgb(228, 228, 228);
     color:black;
     padding:1rem;
     margin: 0.5rem 0;
+}
+
+.keyword{
+    color:purple;
+}
+.headerFile{
+    color:palevioletred;
+}
+.variableNames{
+    color:green;
 }
 
 
