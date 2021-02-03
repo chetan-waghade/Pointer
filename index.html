@@ -49,14 +49,14 @@
     <div class="container">
         <main>
             <aside>
-                <h3>Table of Contents</h3>
                 <div class="table-of-content">
                     <ol class="menu" type="1">
+                        <h3>Table of Contents</h3>
                         <li><a href="#introduction">Pointers Introduction </a></li>
                         <li><a href="#&operator">& Operator</a></li>
                         <li><a href="#*operator">* Operator</a></li>
-                        <li><a href="#introduction">Introduction</a></li>
-                        <li><a href="#introduction">Introduction</a></li>
+                        <li><a href="#pointer-types">Pointer Types</a></li>
+                        <li><a href="#application-of-pointers">Applications of Pointer</a></li>
                     </ol>
                 </div>
             </aside>
@@ -94,12 +94,14 @@
                     <p><code><strong>output : 0x2128</strong></code></p>
                 </div>
                 <!-- code explanation -->
-                <p class="m-1">In code above, we initialized a variable of name <strong>a</strong> with value <strong>5</strong>.
-                just after that we initialized pointer variable by writing <strong>int* ptr</strong> with value <strong>&a</strong>. This is how we initialized pointer variable. 
+                <p class="m-1">In code above, we initialized a variable of name <strong>a</strong> with value
+                    <strong>5</strong>.
+                    just after that we initialized pointer variable by writing <strong>int* ptr</strong> with value
+                    <strong>&a</strong>. This is how we initialize pointer variable.
                 </p>
 
 
-                <p class="note"> Note: The output will differ from compiler to compiler.</p>
+                <p class="note-green"> Note: The output will differ from compiler to compiler.</p>
 
                 <p class="m-1">But before going into details about pointer, lets talk about these two <b>&amp ,
                         &ast;</b> operators.</p>
@@ -116,10 +118,10 @@
                             <code>
                                 <strong>#include &lt;iostream&gt;
                                     <br>
-                                    using namespace std; 
+                                    using namespace std;
                                     <br>
                                     int main(){
-                                    <br>  int  a = 5; <br>
+                                    <br> int a = 5; <br>
                                     cout&lt;&lt;&amp;a; <br>
                                     }</strong>
                             </code>
@@ -146,7 +148,7 @@
                                     <br>
                                     int main()
                                     <br>{<br>
-                                    
+
                                     cout&lt;&lt;5*5; <br>
                                     }</strong>
                             </code>
@@ -178,7 +180,11 @@
                         <p><code><strong>output : 0x21239</strong></code></p>
                     </div>
                     <h4 class="m-1">For derefencing pointer variable</h4>
-                    <p>Derefencing means extracting the value located at some address. When declaring pointer variable we use <strong>*</strong> to tell the compiler that it is pointer variable and not a regular one. Therefore pointer stores address of any variable, pointer is initialized with. Now, to get value stored at that address using pointer variable we use <strong>*var_name</strong>. Thus by derefencing pointer variable, value at that address is extracted.</p>
+                    <p>Derefencing means extracting the value located at some address. When declaring pointer variable
+                        we use <strong>*</strong> to tell the compiler that it is pointer variable and not a regular
+                        one. Therefore pointer stores address of any variable, pointer is initialized with. Now, to get
+                        value stored at that address using pointer variable we use <strong>*var_name</strong>. Thus by
+                        derefencing pointer variable, value at that address is extracted.</p>
                     <p class="m-1">Here is example</p>
                     <div class="code-canvas">
                         <p>
@@ -188,11 +194,11 @@
                                     using namespace std;
                                     <br>
                                     int main(){
-                                        <br> int a = 17;
+                                    <br> int a = 17;
                                     <br> int* ptr = &amp;a; <br>
-                                    cout&lt;&lt; *ptr &lt;&lt;" stored at address " &lt;&lt; ptr ;  <br>
+                                    cout&lt;&lt; *ptr &lt;&lt;" stored at address " &lt;&lt; ptr ; <br>
                                     <br>return 0;
-                                <br>}
+                                    <br>}
                                 </strong>
                             </code>
                         </p>
@@ -200,14 +206,102 @@
                     <div class="output-canvas">
                         <p><code><strong>output : 17 stored at address 0x23456</strong></code></p>
                     </div>
+                    <div class="table-representation m-1">
+                        <p>This is how it looks like in memory.</p>
+                        <table class="m-1">
+                            <tr>
+                                <th>Variable Name</th>
+                                <th>Value</th>
+                                <th>Address</th>
+                            </tr>
+                            <tr>
+                                <td>a</td>
+                                <td>17</td>
+                                <td>0x23456</td>
+                            </tr>
+                            <tr>
+                                <td>ptr</td>
+                                <td>0x23456</td>
+                                <td>0x56749</td>
+                            </tr>
+                        </table>
+                        <p class="m-1 note-red">
+                            Note: If we try to access *ptr in output without assigning it any variable address, it will throw segfault error.
+                        </p>
+                    </div>
+                    <!-- Pointer Types -->
+                    <div id="pointer-types" class=" m-1">
+                        <h3>Pointer Types</h3>
+                        <p class="m-1">Pointer can store address of variables of different data types.</p>
+                        <div class="code-canvas">
+                            <p>
+                                <code>
+                                    <strong>#include &lt;iostream&gt;
+                                        <br>
+                                        using namespace std;
+                                        <br>
+                                        int main(){
+                                            <br> 
+                                        <br> int a = 17;
+                                        <br> int* ptr = &amp;a; //int type<br> 
+                                        
+                                        <br> double b = 23.12;
+                                        <br> double *ptr_b = &amp;b; //double type<br> 
+
+                                        <br> string s = "hello";
+                                        <br> string *ptr_s = &amp;s; //string type<br> 
+                                        <br>
+                                        cout&lt;&lt; *ptr &lt;&lt;" ; <br><br> 
+
+                                        cout&lt;&lt; *ptr_b &lt;&lt;" ; <br><br> 
+
+                                        cout&lt;&lt; *ptr_s &lt;&lt;" ; <br><br> 
+                                        <br>return 0;
+                                        <br>}
+                                    </strong>
+                                </code>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="application-of-pointers">
+                        <h3>
+                            &nbsp;Applications of Pointers
+                        </h3>
+                        <div class="m-1">
+                            <h5>1. Changing the passed parameters.</h5>
+                        </div>
+                        <div class="m-1">
+                            <h5>2. Passing large objects.</h5>
+                        </div>
+                        <div class="m-1">
+                            <h5>3. Dynamic Memory Allocation</h5>
+                        </div>
+                        <div class="m-1">
+                            <h5>4. Implementing data structures like, linked list, tree, bst, etc.</h5>
+                        </div>
+                        <div class="m-1">
+                            <h5>5. To do System Level programming.</h5>
+                        </div>
+                        <div class="m-1">
+                            <h5>6. To return multiple values.</h5>
+                        </div>
+                        <div class="m-1">
+                            <h5>7. Used for accessing array elements.</h5>
+                        </div>
+                        <p class="note-green m-1">
+                            Note : Disadvantage of reference over pointer is, reference <strong>cannot be redeclared.</strong> 
+                        </p>
+                    </div>
                 </div>
 
-                
+
             </section>
         </main>
         <!-- Footer -->
         <footer>
-            <p>Written with ❤️ by <a href="https://github.com/chetan-waghade" style="color:black;text-decoration:underline;">Chetan Waghade.</a></p>
+            <p>Written with ❤️ by <a href="https://github.com/chetan-waghade"
+                    style="color:black;text-decoration:underline;">Chetan Waghade.</a></p>
         </footer>
     </div>
 

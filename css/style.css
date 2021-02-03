@@ -40,6 +40,7 @@ body {
 /* anchor */
 a {
     text-decoration: none;
+    
 }
 
 /* icons */
@@ -83,10 +84,16 @@ a {
     color:#4E5340;
 }
 
-.note{
+.note-green{
     font-size: 0.9rem;
     color:green;
 }
+
+.note-red{
+    font-size: 0.9rem;
+    color:red;
+}
+
 
 /* margin */
 .m-1{
@@ -124,6 +131,19 @@ a {
     color:green;
 }
 
+/* table */
+
+table {
+    border-collapse: collapse;
+  }
+
+  td, th {
+    border: 0.1rem solid #dddddd;
+    text-align: left;
+    padding: 1rem;
+  }
+  
+
 
 /* Components */
 
@@ -154,13 +174,17 @@ nav .navbar{
 main aside{
     width: 15vw;
     padding: 1rem;
-    
     text-align: center;
+    
+    
 }
 
+
 main aside .table-of-content .menu{
-    text-align: justify;
+    text-align: left;
     padding: 0.5rem 0.5rem;
+    position: fixed;
+    
 }
 
 main aside .table-of-content .menu li{
@@ -169,7 +193,8 @@ main aside .table-of-content .menu li{
 
 /* color links */
 main aside .table-of-content .menu li a{
-    color:purple;
+    color:black;
+    text-decoration: underline;
 }
 
 

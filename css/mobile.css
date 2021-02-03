@@ -6,4 +6,11 @@
     main section{
         width: 100vw;
     }
+    /* make navbar stickey in mobile*/
+    nav .navbar{
+      position: fixed;
+      top:0;
+      right: 0;
+      left: 0;
+    }
   }
